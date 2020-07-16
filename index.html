@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
@@ -13,76 +13,152 @@
   </head>
   <body>
     <header class="wrapper header-wrapper">
-      <a href="#"><img src="./images/logo.png" alt="wambi-logo" class="logo" /></a>
-      <ul>
-        <li><i class="fa fa-search" aria-hidden="true" class="search"></i></li>
-        <li class="btn-menu"></li>
-      </ul>
+      <div class="navbar navbar-top">
+        <div class="languages">
+          <a href="#">En</a>
+          <a href="#">Sp</a>
+        </div>
+        <div>
+          <a href="#">Request Demo</a>
+          <a href="#">Support</a>
+          <a href="#">619-389-2624</a>
+        </div>
+      </div>
+      <div class="navbar navbar-bottom">
+        <a href="#"><img src="./images/logo.png" alt="wambi-logo" class="logo" /></a>
+        <div class="navbar-menu">
+          <div class="navbar-menu-responsive">
+            <i class="fa fa-search btn-search" aria-hidden="true"></i>
+            <a class="btn-menu"></a>
+          </div>
+
+          <div class="navbar-menu-desktop">
+            <div>
+              <div class="menu-content-desktop">
+                <div class="menu-item">
+                  <div>About</div>
+                  <div><i class="fa fa-angle-down fa-2x"></i></div>
+                </div>
+                <div class="menu-item-body">
+                  <a href="#">Company</a>
+                  <a href="#">Awards and Partnerships</a>
+                  <a href="#">News</a>
+                  <a href="#">Careers</a>
+                </div>
+
+                <div class="menu-item">
+                  <div>For Leaders</div>
+                  <div><i class="fa fa-angle-down fa-2x"></i></div>
+                </div>
+                <div class="menu-item-body">
+                  <a href="#">Company</a>
+                  <a href="#">Awards and Partnerships</a>
+                  <a href="#">News</a>
+                  <a href="#">Careers</a>
+                </div>
+
+                <div class="menu-item">
+                  <div>For Teams</div>
+                  <div><i class="fa fa-angle-down fa-2x"></i></div>
+                </div>
+                <div class="menu-item-body">
+                  <a href="#">Company</a>
+                  <a href="#">Awards and Partnerships</a>
+                  <a href="#">News</a>
+                  <a href="#">Careers</a>
+                </div>
+
+                <div class="menu-item">
+                  <div>For Patients and Families</div>
+                  <div><i class="fa fa-angle-down fa-2x"></i></div>
+                </div>
+                <div class="menu-item-body">
+                  <a href="#">Company</a>
+                  <a href="#">Awards and Partnerships</a>
+                  <a href="#">News</a>
+                  <a href="#">Careers</a>
+                </div>
+
+                <div class="menu-item">
+                  <div>Resources</div>
+                  <div><i class="fa fa-angle-down fa-2x"></i></div>
+                </div>
+                <div class="menu-item-body">
+                  <a href="#">Company</a>
+                  <a href="#">Awards and Partnerships</a>
+                  <a href="#">News</a>
+                  <a href="#">Careers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+    <div class="search">
+      <form action="" class="search-content">
+        <input type="text" placeholder="What are you looking for?" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
     <div class="menu">
       <div class="menu-content">
-        <ul>
-          <li>
-            <div class="menu-item">
-              <div>About</div>
-              <div><i class="fa fa-angle-down fa-2x"></i></div>
-            </div>
-            <div class="menu-item-body">
-              <a href="#">Company</a>
-              <a href="#">Awards and Partnerships</a>
-              <a href="#">News</a>
-              <a href="#">Careers</a>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item">
-              <div>For Leaders</div>
-              <div><i class="fa fa-angle-down fa-2x"></i></div>
-            </div>
-            <div class="menu-item-body">
-              <a href="#">Company</a>
-              <a href="#">Awards and Partnerships</a>
-              <a href="#">News</a>
-              <a href="#">Careers</a>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item">
-              <div>For Teams</div>
-              <div><i class="fa fa-angle-down fa-2x"></i></div>
-            </div>
-            <div class="menu-item-body">
-              <a href="#">Company</a>
-              <a href="#">Awards and Partnerships</a>
-              <a href="#">News</a>
-              <a href="#">Careers</a>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item">
-              <div>For Patients and Families</div>
-              <div><i class="fa fa-angle-down fa-2x"></i></div>
-            </div>
-            <div class="menu-item-body">
-              <a href="#">Company</a>
-              <a href="#">Awards and Partnerships</a>
-              <a href="#">News</a>
-              <a href="#">Careers</a>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item">
-              <div>Resources</div>
-              <div><i class="fa fa-angle-down fa-2x"></i></div>
-            </div>
-            <div class="menu-item-body">
-              <a href="#">Company</a>
-              <a href="#">Awards and Partnerships</a>
-              <a href="#">News</a>
-              <a href="#">Careers</a>
-            </div>
-          </li>
-        </ul>
+        <div>
+          <div class="menu-item">
+            <div>About</div>
+            <div><i class="fa fa-angle-down fa-2x"></i></div>
+          </div>
+          <div class="menu-item-body">
+            <a href="#">Company</a>
+            <a href="#">Awards and Partnerships</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+          </div>
+
+          <div class="menu-item">
+            <div>For Leaders</div>
+            <div><i class="fa fa-angle-down fa-2x"></i></div>
+          </div>
+          <div class="menu-item-body">
+            <a href="#">Company</a>
+            <a href="#">Awards and Partnerships</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+          </div>
+
+          <div class="menu-item">
+            <div>For Teams</div>
+            <div><i class="fa fa-angle-down fa-2x"></i></div>
+          </div>
+          <div class="menu-item-body">
+            <a href="#">Company</a>
+            <a href="#">Awards and Partnerships</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+          </div>
+
+          <div class="menu-item">
+            <div>For Patients and Families</div>
+            <div><i class="fa fa-angle-down fa-2x"></i></div>
+          </div>
+          <div class="menu-item-body">
+            <a href="#">Company</a>
+            <a href="#">Awards and Partnerships</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+          </div>
+
+          <div class="menu-item">
+            <div>Resources</div>
+            <div><i class="fa fa-angle-down fa-2x"></i></div>
+          </div>
+          <div class="menu-item-body">
+            <a href="#">Company</a>
+            <a href="#">Awards and Partnerships</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="wrapper hero-container">
@@ -104,7 +180,7 @@
       src="https://www.youtube.com/embed/ODLBLjWeb0k?enablejsapi=1&version=3&playerapiid=ytplayer"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowfdivlscreen
     ></iframe>
     <div class="close-button"><i class="fa fa-times" aria-hidden="true"></i></div>
     <script src="./js/script.js"></script>
