@@ -12,7 +12,7 @@
   --green: #7fe6bb;
   --black: #181b3c;
   --lightBlack: rgba(24, 27, 60, 0.6);
-  --lightGrey: rgba(34, 38, 96, .1);
+  --lightGrey: rgba(34, 38, 96, 0.1);
   --mediumSlateBlue: #7663e1;
 }
 
@@ -23,6 +23,28 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Scroll */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*  */
 
 .wrapper {
   max-width: 1200px;
@@ -40,11 +62,14 @@ a {
   padding: 26px 15px;
 }
 
-.navbar-menu-responsive, .navbar-top div, .menu-content-desktop {
+.navbar-menu-responsive,
+.navbar-top div,
+.menu-content-desktop {
   display: flex;
 }
 
-.navbar-menu-responsive a, .navbar-top a {
+.navbar-menu-responsive a,
+.navbar-top a {
   padding: 0px 10px;
   color: var(--purpleDark);
   cursor: pointer;
@@ -54,7 +79,8 @@ a {
   color: (var(--purpleDark));
 }
 
-.navbar, .navbar-bottom {
+.navbar,
+.navbar-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +90,7 @@ a {
 .navbar-top {
   display: none;
   padding: 0px 0px 20px;
-  border-bottom: 1px solid rgba(34, 38, 96, .1);
+  border-bottom: 1px solid rgba(34, 38, 96, 0.1);
 }
 
 .navbar-menu-desktop {
@@ -142,7 +168,8 @@ a {
   margin-left: 20px;
 }
 
-.btn-menu::before, .btn-menu::after {
+.btn-menu::before,
+.btn-menu::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -164,7 +191,8 @@ a {
   z-index: 98;
 }
 
-.open::before, .open::after {
+.open::before,
+.open::after {
   top: 50%;
   background-color: white;
 }
@@ -177,7 +205,8 @@ a {
   transform: rotate(-45deg);
 }
 
-.btn-menu-search::before, .btn-menu-search::after {
+.btn-menu-search::before,
+.btn-menu-search::after {
   background-color: white;
 }
 
@@ -217,7 +246,7 @@ a {
 }
 
 .menu-content-desktop .menu-item-body::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: -8px;
@@ -258,7 +287,7 @@ a {
 
 /* Hero */
 
-.hero {
+.hero-image {
   margin: 0 auto;
   width: 217px;
   position: relative;
@@ -276,7 +305,7 @@ a {
   right: -65px;
 }
 
-.hero img {
+.hero-image img {
   width: 100%;
 }
 
@@ -365,8 +394,70 @@ iframe {
   text-align: center;
 }
 
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+.chatbot span {
+  font-size: 25px;
+  color: white;
+}
+
+.chatbot-open {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+}
+
+.chatbot-open-title {
+  font-size: 24px;
+  padding: 10px 20px;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.chatbot-open-close-btn {
+  cursor: pointer;
+}
+
+.chatbot-open-content {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 18px;
+}
+
+.chatbot-open-content p {
+  margin-bottom: 10px;
+}
+
+.chatbot-open-content a {
+  color: var(--green);
+  display: block;
+}
+
 @media (min-width: 768px) {
-  .navbar-top, .navbar-menu-desktop {
+  .navbar-top,
+  .navbar-menu-desktop {
     display: flex;
   }
   .navbar-menu-responsive {
@@ -382,14 +473,24 @@ iframe {
     display: flex;
     flex-direction: row-reverse;
     padding: 0px 50px;
+    position: relative;
   }
   h1 {
     font-size: 64px;
   }
+  .test {
+    background-color: royalblue;
+    width: 100%;
+    height: 60px;
+  }
+  .hero {
+    overflow: hidden;
+  }
   .hero-content {
     width: 50%;
+    padding-right: 20px;
   }
-  .hero img {
+  .hero-image img {
     width: 300px;
   }
 }

@@ -11,6 +11,9 @@ let searchContent = document.querySelector(".search-content");
 let menuResponsive = document.querySelector(".menu-responsive");
 let menuContent = document.querySelector(".menu-content");
 let menuItems = document.querySelectorAll(".menu-item");
+let chatbot = document.querySelector(".chatbot");
+let chatbotOpen = document.querySelector(".chatbot-open");
+let chatbotCloseBtn = document.querySelector(".chatbot-open-close-btn");
 
 searchBtn.addEventListener("click", function () {
   burgerMenu.classList.toggle("btn-menu-search");
@@ -90,4 +93,12 @@ closeBtn.addEventListener("click", function () {
   document.body.style.overflowY = "visible";
   closeBtn.style.display = "none";
   iframe.contentWindow.postMessage('{"event":"command","func":"' + "stopVideo" + '","args":""}', "*");
+});
+
+chatbot.addEventListener("click", function () {
+  chatbotOpen.style.display = "block";
+});
+
+chatbotCloseBtn.addEventListener("click", function () {
+  chatbotOpen.style.display = "none";
 });
