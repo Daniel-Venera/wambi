@@ -378,4 +378,18 @@ iframe {
   .menu-item span:first-of-type {
     padding-right: 10px;
   }
+  .hero-container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0px 50px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  .hero-content {
+    width: 50%;
+  }
+  .hero img {
+    width: 300px;
+  }
 }
