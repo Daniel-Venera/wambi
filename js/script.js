@@ -8,7 +8,7 @@ let logo = document.querySelector(".logo");
 let searchBtn = document.querySelector(".btn-search");
 let search = document.querySelector(".search");
 let searchContent = document.querySelector(".search-content");
-let menu = document.querySelector(".menu");
+let menuResponsive = document.querySelector(".menu-responsive");
 let menuContent = document.querySelector(".menu-content");
 let menuItems = document.querySelectorAll(".menu-item");
 
@@ -44,13 +44,13 @@ burgerMenu.addEventListener("click", function () {
       burgerMenu.classList.remove("btn-menu-search");
       closeSearch();
     }
-    menu.style.maxHeight = "100%";
+    menuResponsive.style.maxHeight = "100%";
     logo.setAttribute("src", "./images/logo-inverse.png");
     setTimeout(function () {
       menuContent.style.display = "block";
     }, 300);
   } else {
-    menu.style.maxHeight = "0";
+    menuResponsive.style.maxHeight = "0";
     logo.setAttribute("src", "./images/logo.png");
     menuContent.style.display = "none";
     closeMenuItems();
