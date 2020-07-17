@@ -465,13 +465,11 @@ h1 {
 
 .advantage-slider {
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 .advantage-slider-content {
-  /* border: 1px solid white; */
   display: flex;
-  width: 1050px;
+  width: 200%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -488,11 +486,13 @@ h1 {
 .advantage-card span {
   font-size: 40px;
   font-weight: bold;
+  width: 80%;
 }
 
 .advantage-card p {
   margin-top: 20px;
   font-size: 18px;
+  width: 80%;
 }
 
 /* Chatbot */
@@ -650,6 +650,13 @@ h1 {
     background-color: var(--mediumPurple);
     left: 0%;
     transform: translateX(-50%);
+  }
+  .advantage-card-number,
+  .advantage-card span {
+    font-size: 64px;
+  }
+  .advantage-card p {
+    font-size: 24px;
   }
 }
 
