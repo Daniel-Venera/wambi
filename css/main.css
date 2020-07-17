@@ -59,7 +59,7 @@ a {
 /* Header */
 
 .hero {
-  display: none;
+  /* display: none; */
 }
 
 .header-wrapper {
@@ -596,6 +596,10 @@ h1 {
     font-size: 64px;
     line-height: 64px;
   }
+  .hero-content p {
+    font-size: 18px;
+    line-height: 27px;
+  }
   .hero {
     overflow: hidden;
     height: auto;
@@ -651,12 +655,29 @@ h1 {
     left: 0%;
     transform: translateX(-50%);
   }
-  .advantage-card-number,
+  .advantage-content {
+    padding: 90px;
+  }
+  .advantage-card {
+    display: flex;
+  }
+  .advantage-card-number {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 600;
+    margin: 0;
+    width: 50%;
+  }
   .advantage-card span {
     font-size: 64px;
+    line-height: 64px;
+  }
+  .advantage-title {
+    max-width: 50%;
+    font-size: 34px;
   }
   .advantage-card p {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
