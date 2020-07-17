@@ -62,22 +62,22 @@ burgerMenu.addEventListener("click", function () {
 
 menuItems.forEach(function (e) {
   e.addEventListener("click", function () {
-    if (e.nextElementSibling.style.display == "block") {
+    if (e.nextElementSibling.classList.contains("menu-item-body-open")) {
       e.lastElementChild.style.transform = "rotate(0)";
-      e.nextElementSibling.style.display = "none";
+      e.nextElementSibling.classList.remove("menu-item-body-open");
     } else {
       closeMenuItems();
       e.lastElementChild.style.transform = "rotate(180deg)";
-      e.nextElementSibling.style.display = "block";
+      e.nextElementSibling.classList.add("menu-item-body-open");
     }
   });
 });
 
 function closeMenuItems() {
   menuItems.forEach(function (f) {
-    if (f.nextElementSibling.style.display == "block") {
+    if (f.nextElementSibling.classList.contains("menu-item-body-open")) {
       f.lastElementChild.style.transform = "rotate(0)";
-      f.nextElementSibling.style.display = "none";
+      f.nextElementSibling.classList.remove("menu-item-body-open");
     }
   });
 }
