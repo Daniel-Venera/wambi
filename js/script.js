@@ -14,7 +14,8 @@ let menuItems = document.querySelectorAll(".menu-item");
 let chatbot = document.querySelector(".chatbot");
 let chatbotOpen = document.querySelector(".chatbot-open");
 let chatbotCloseBtn = document.querySelector(".chatbot-open-close-btn");
-
+let advantageArrows = document.querySelectorAll(".advantage-arrow");
+let advantageSliderContent = document.querySelector(".advantage-slider-content");
 searchBtn.addEventListener("click", function () {
   burgerMenu.classList.toggle("btn-menu-search");
   if (searchBtn.classList.contains("fa-search")) {
@@ -82,6 +83,7 @@ function closeMenuItems() {
   });
 }
 
+// Video
 buttonPlayer.addEventListener("click", function () {
   iframe.style.display = "block";
   document.body.style.overflowY = "hidden";
@@ -95,6 +97,43 @@ closeBtn.addEventListener("click", function () {
   iframe.contentWindow.postMessage('{"event":"command","func":"' + "stopVideo" + '","args":""}', "*");
 });
 
+// Advantage Slider
+let advantageSliderCount = 1;
+advantageArrows.forEach(function (e) {
+  e.addEventListener("click", function () {
+    if (e.classList.contains("button-active")) {
+      if (advantageSliderCount == 1) {
+        if (e.classList.contains("arrow-right")) {
+          advantageSliderContent.style.transform = "translateX(-33%)";
+          advantageArrows[0].classList.add("button-active");
+        }
+      }
+      if (advantageSliderCount == 2) {
+        if (e.classList.contains("arrow-right")) {
+          advantageSliderContent.style.transform = "translateX(-66%)";
+          e.classList.remove("button-active");
+        } else {
+          advantageSliderContent.style.transform = "translateX(0)";
+          advantageArrows[0].classList.remove("button-active");
+        }
+      }
+      if (advantageSliderCount == 3) {
+        if (e.classList.contains("arrow-left")) {
+          advantageSliderContent.style.transform = "translateX(-33%)";
+          advantageArrows[1].classList.add("button-active");
+        }
+      }
+      if (e.classList.contains("arrow-right")) {
+        advantageSliderCount++;
+      } else {
+        advantageSliderCount--;
+      }
+    }
+    log(advantageSliderCount);
+  });
+});
+
+// Chatbot
 chatbot.addEventListener("click", function () {
   chatbotOpen.style.display = "block";
 });

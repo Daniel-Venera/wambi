@@ -451,6 +451,12 @@ h1 {
   background-color: var(--lightGrey);
   font-size: 18px;
   margin: 0px 10px 30px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.advantage button:focus {
+  outline: none;
 }
 
 .advantage .button-active {
@@ -459,17 +465,19 @@ h1 {
 
 .advantage-slider {
   overflow: hidden;
+  /* border: 1px solid red; */
 }
 
 .advantage-slider-content {
+  /* border: 1px solid white; */
   display: flex;
-  width: 150%;
-  /* transform: translateX(-33%); */
+  width: 1050px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .advantage-card {
-  width: 50%;
-  padding: 0px 50px 0px 20px;
+  width: 33%;
+  word-break: break-word;
 }
 
 .advantage-card-number {
@@ -488,6 +496,7 @@ h1 {
 }
 
 /* Chatbot */
+
 .chatbot {
   position: fixed;
   bottom: 20px;
