@@ -10,7 +10,7 @@
   --purpleDark: #3d4174;
   --orchid: #c574f7;
   --green: #7fe6bb;
-  --lightGreen: rgba(112, 226, 172, .2);
+  --lightGreen: rgba(112, 226, 172, 0.2);
   --black: #222660;
   --lightBlack: rgba(24, 27, 60, 0.6);
   --lightGrey: rgba(34, 38, 96, 0.1);
@@ -26,6 +26,10 @@ body {
   color: var(--black);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 /* Scroll */
@@ -68,11 +72,14 @@ a {
   padding: 26px 15px;
 }
 
-.navbar-menu-responsive, .navbar-top div, .menu-content-desktop {
+.navbar-menu-responsive,
+.navbar-top div,
+.menu-content-desktop {
   display: flex;
 }
 
-.navbar-menu-responsive a, .navbar-top a {
+.navbar-menu-responsive a,
+.navbar-top a {
   padding: 0px 10px;
   color: var(--purpleDark);
   cursor: pointer;
@@ -82,7 +89,8 @@ a {
   color: (var(--purpleDark));
 }
 
-.navbar, .navbar-bottom {
+.navbar,
+.navbar-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,7 +178,8 @@ a {
   margin-left: 20px;
 }
 
-.btn-menu::before, .btn-menu::after {
+.btn-menu::before,
+.btn-menu::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -192,7 +201,8 @@ a {
   z-index: 98;
 }
 
-.open::before, .open::after {
+.open::before,
+.open::after {
   top: 50%;
   background-color: white;
 }
@@ -205,7 +215,8 @@ a {
   transform: rotate(-45deg);
 }
 
-.btn-menu-search::before, .btn-menu-search::after {
+.btn-menu-search::before,
+.btn-menu-search::after {
   background-color: white;
 }
 
@@ -343,14 +354,6 @@ a {
   transform: scale(1);
   z-index: -1;
   transition: transform 0.6s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scale(0);
-}
-
-.button:hover {
-  color: black;
 }
 
 .button-player {
@@ -504,7 +507,7 @@ h1 {
 .quote-image {
   width: 130px;
   height: 130px;
-  background: url('../images/quote/Kelli-OBrien-HMH.jpg');
+  background: url("../images/quote/Kelli-OBrien-HMH.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 32px;
@@ -512,10 +515,11 @@ h1 {
   position: relative;
 }
 
-.quote-image::before, .quote-image::after {
+.quote-image::before,
+.quote-image::after {
   content: "";
   position: absolute;
-  z-index: -1
+  z-index: -1;
 }
 
 .quote-image::before {
@@ -557,7 +561,7 @@ h1 {
 .quote-job {
   max-width: 290px;
   font-size: 16px;
-  color: rgba(34, 38, 96, .6);
+  color: rgba(34, 38, 96, 0.6);
   margin: auto;
 }
 
@@ -582,12 +586,37 @@ h1 {
 }
 
 .quote-text-left {
-  top: -20px
+  top: -20px;
 }
 
 .quote-text-right {
   bottom: 0px;
   right: 10px;
+}
+
+/* Demo */
+
+.demo-image {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+.demo-content span {
+  position: relative;
+}
+
+.demo-content span img {
+  max-width: 100px;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
+
+.demo-button {
+  display: block;
+  width: 100%;
+  background-color: var(--purple);
 }
 
 /* Chatbot */
@@ -604,6 +633,7 @@ h1 {
   justify-content: center;
   background-color: var(--green);
   cursor: pointer;
+  z-index: 99;
 }
 
 .chatbot span {
@@ -616,7 +646,7 @@ h1 {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 99;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -654,10 +684,21 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .navbar-top, .navbar-menu-desktop {
+  h2 {
+    font-size: 34px;
+  }
+  .button:hover::before {
+    transform: scale(0);
+  }
+  .button:hover {
+    color: black;
+  }
+  .navbar-top,
+  .navbar-menu-desktop {
     display: flex;
   }
-  .navbar-menu-responsive, .menu-responsive {
+  .navbar-menu-responsive,
+  .menu-responsive {
     display: none;
   }
   .menu-item {
@@ -718,7 +759,8 @@ h1 {
     bottom: 0;
     z-index: -1;
   }
-  .hero-circle-left, .hero-circle-right {
+  .hero-circle-left,
+  .hero-circle-right {
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -727,7 +769,8 @@ h1 {
   .hero-circle-left {
     background-color: var(--ghostWhite);
   }
-  .hero-circle-left::before, .hero-circle-right::before {
+  .hero-circle-left::before,
+  .hero-circle-right::before {
     content: "";
     height: 300px;
     width: 300px;
@@ -772,14 +815,13 @@ h1 {
   }
   .quote-wrapper {
     display: flex;
-    padding: 80px 50px 60px
+    padding: 80px 30px 60px;
   }
   .quote-presentation {
     text-align: left;
-    padding-left: 30px;
   }
   .quote-image {
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 0px 0px;
   }
   .quote-name {
     font-size: 24px;
@@ -794,11 +836,31 @@ h1 {
     font-size: 18px;
     line-height: 27px;
   }
+  .demo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .demo-image {
+    width: 400px;
+  }
+  .demo-content {
+    padding-left: 50px;
+    width: 50%;
+  }
+  .demo-button {
+    width: 200px;
+    display: inline-block;
+    background-color: white !important;
+  }
 }
 
 @media (min-width: 1024px) {
+  .wrapper {
+    padding: 0px 50px;
+  }
   .hero {
-    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .hero-image img {
     width: 364px;
@@ -806,3 +868,8 @@ h1 {
   .advantage-card-number {
     width: 30%;
   }
+  .quote-wrapper {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
