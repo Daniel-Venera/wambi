@@ -10,10 +10,12 @@
   --purpleDark: #3d4174;
   --orchid: #c574f7;
   --green: #7fe6bb;
+  --lightGreen: rgba(112, 226, 172, .2);
   --black: #222660;
   --lightBlack: rgba(24, 27, 60, 0.6);
   --lightGrey: rgba(34, 38, 96, 0.1);
-  --mediumSlateBlue: #7663e1;
+  --mediumSlateBlue: #703de1;
+  --lightBlue: #d0d8fd;
   --ghostWhite: #fbfaff;
   --mediumPurple: #a98bed;
 }
@@ -66,14 +68,11 @@ a {
   padding: 26px 15px;
 }
 
-.navbar-menu-responsive,
-.navbar-top div,
-.menu-content-desktop {
+.navbar-menu-responsive, .navbar-top div, .menu-content-desktop {
   display: flex;
 }
 
-.navbar-menu-responsive a,
-.navbar-top a {
+.navbar-menu-responsive a, .navbar-top a {
   padding: 0px 10px;
   color: var(--purpleDark);
   cursor: pointer;
@@ -83,8 +82,7 @@ a {
   color: (var(--purpleDark));
 }
 
-.navbar,
-.navbar-bottom {
+.navbar, .navbar-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,8 +170,7 @@ a {
   margin-left: 20px;
 }
 
-.btn-menu::before,
-.btn-menu::after {
+.btn-menu::before, .btn-menu::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -195,8 +192,7 @@ a {
   z-index: 98;
 }
 
-.open::before,
-.open::after {
+.open::before, .open::after {
   top: 50%;
   background-color: white;
 }
@@ -209,8 +205,7 @@ a {
   transform: rotate(-45deg);
 }
 
-.btn-menu-search::before,
-.btn-menu-search::after {
+.btn-menu-search::before, .btn-menu-search::after {
   background-color: white;
 }
 
@@ -495,6 +490,105 @@ h1 {
   width: 80%;
 }
 
+/* Quote */
+
+.quote-wrapper {
+  padding: 80px 15px 60px;
+}
+
+.quote-presentation {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quote-image {
+  width: 130px;
+  height: 130px;
+  background: url('../images/quote/Kelli-OBrien-HMH.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 32px;
+  margin: 0px auto 40px auto;
+  position: relative;
+}
+
+.quote-image::before, .quote-image::after {
+  content: "";
+  position: absolute;
+  z-index: -1
+}
+
+.quote-image::before {
+  width: 90px;
+  height: 90px;
+  background-color: var(--lightBlue);
+  top: -30px;
+  left: -30px;
+  border-radius: 32px;
+}
+
+.quote-image::after {
+  width: 60px;
+  height: 60px;
+  background-color: var(--lightGreen);
+  bottom: -20px;
+  right: -20px;
+  border-radius: 20px;
+}
+
+.quote-image-outline {
+  position: absolute;
+  z-index: 2;
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--green);
+  border-radius: 32px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.quote-name {
+  color: var(--purpleDark);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quote-job {
+  max-width: 290px;
+  font-size: 16px;
+  color: rgba(34, 38, 96, .6);
+  margin: auto;
+}
+
+.quote-text {
+  position: relative;
+  font-size: 15px;
+  line-height: 23px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--mediumSlateBlue);
+}
+
+.quote-text p {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.quote-text p span  {
+  position: absolute;
+  color: var(--mediumPurple);
+}
+
+.quote-text-left {
+  top: -20px
+}
+
+.quote-text-right {
+  bottom: 0px;
+  right: 10px;
+}
+
 /* Chatbot */
 
 .chatbot {
@@ -559,12 +653,10 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .navbar-top,
-  .navbar-menu-desktop {
+  .navbar-top, .navbar-menu-desktop {
     display: flex;
   }
-  .navbar-menu-responsive,
-  .menu-responsive {
+  .navbar-menu-responsive, .menu-responsive {
     display: none;
   }
   .menu-item {
@@ -625,8 +717,7 @@ h1 {
     bottom: 0;
     z-index: -1;
   }
-  .hero-circle-left,
-  .hero-circle-right {
+  .hero-circle-left, .hero-circle-right {
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -635,8 +726,7 @@ h1 {
   .hero-circle-left {
     background-color: var(--ghostWhite);
   }
-  .hero-circle-left::before,
-  .hero-circle-right::before {
+  .hero-circle-left::before, .hero-circle-right::before {
     content: "";
     height: 300px;
     width: 300px;
@@ -666,7 +756,7 @@ h1 {
     line-height: 56px;
     font-weight: 600;
     margin: 0;
-    width: 50%;
+    width: 60%;
   }
   .advantage-card span {
     font-size: 64px;
@@ -688,4 +778,6 @@ h1 {
   .hero-image img {
     width: 364px;
   }
-}
+  .advantage-card-number {
+    width: 30%;
+  }
