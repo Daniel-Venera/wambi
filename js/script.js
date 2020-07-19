@@ -1,5 +1,3 @@
-let log = console.log;
-
 let buttonPlayer = document.querySelector(".button-player");
 let iframe = document.querySelector(".youtube-video");
 let closeBtn = document.querySelector(".close-button");
@@ -16,6 +14,7 @@ let chatbotOpen = document.querySelector(".chatbot-open");
 let chatbotCloseBtn = document.querySelector(".chatbot-open-close-btn");
 let advantageArrows = document.querySelectorAll(".advantage-arrow");
 let advantageSliderContent = document.querySelector(".advantage-slider-content");
+
 searchBtn.addEventListener("click", function () {
   burgerMenu.classList.toggle("btn-menu-search");
   if (searchBtn.classList.contains("fa-search")) {
@@ -129,7 +128,6 @@ advantageArrows.forEach(function (e) {
         advantageSliderCount--;
       }
     }
-    log(advantageSliderCount);
   });
 });
 

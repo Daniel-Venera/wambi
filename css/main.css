@@ -18,6 +18,7 @@
   --lightBlue: #d0d8fd;
   --ghostWhite: #fbfaff;
   --mediumPurple: #a98bed;
+  --lightPink: #f1d3ff;
 }
 
 body {
@@ -149,7 +150,7 @@ a {
   border: none;
 }
 
-.search-content input {
+input {
   width: 100%;
   padding: 0px 0px 5px 20px;
   background-color: transparent;
@@ -159,10 +160,10 @@ a {
 }
 
 ::placeholder {
-  color: white;
+  color: var(--lightPink);
 }
 
-.search-content input:focus {
+input:focus {
   outline: none;
 }
 
@@ -619,6 +620,91 @@ h1 {
   background-color: var(--purple);
 }
 
+/* Footer */
+
+footer {
+  background-color: var(--mediumSlateBlue);
+}
+
+.footer-wrapper {
+  color: white;
+  padding: 60px 15px;
+}
+
+.footer-navigation {
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  max-width: 300px;
+  margin-bottom: 40px;
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links div {
+  padding-right: 50px;
+}
+
+.footer-links a {
+  color: var(--lightPink);
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-form-title {
+  font-size: 34px;
+  line-height: 38px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-form-subtitle {
+  color: var(--lightPink);
+  margin-bottom: 20px;
+}
+
+.button-footer-form {
+  display: block;
+  width: 100%;
+  background-color: var(--green);
+  color: var(--black);
+  border: 1px solid var(--green);
+}
+
+.button-footer-form::before {
+  display: none;
+}
+
+.footer-form input {
+  border-bottom: 1px solid white;
+  padding-left: 0;
+}
+
+.footer-form input::placeholder {
+  font-size: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-social-links {
+  margin-bottom: 20px;
+}
+
+.footer-social-links i {
+  font-size: 18px;
+  padding: 0px 10px;
+  color: white;
+}
+
 /* Chatbot */
 
 .chatbot {
@@ -703,6 +789,9 @@ h1 {
   }
   .menu-item {
     margin: 0px 10px;
+  }
+  .menu-item span {
+    transition: transform 0.7s ease-in-out;
   }
   .menu-item span:first-of-type {
     padding-right: 10px;
@@ -852,16 +941,46 @@ h1 {
     display: inline-block;
     background-color: white !important;
   }
+  .footer-wrapper {
+    padding: 60px 30px;
+  }
+  .footer-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-links a:hover {
+    color: var(--green);
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .button-footer-form {
+    background-color: transparent;
+    color: black;
+  }
+  .button-footer-form:hover {
+    color: white;
+  }
+  .button-footer-form::before {
+    display: block;
+    background-color: var(--green);
+  }
+
+  .footer-social-links i {
+    font-size: 24px;
+    padding: 0px 20px;
+  }
 }
 
 @media (min-width: 1024px) {
   .wrapper {
-    padding: 0px 50px;
+    padding: 30px 50px;
   }
-  .hero {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+
   .hero-image img {
     width: 364px;
   }
